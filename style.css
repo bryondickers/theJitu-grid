@@ -31,6 +31,7 @@ main{
     background:var(--very-dark-blue);
     max-inline-size: 375px;
     padding: 0.8rem;
+    margin-bottom: 1rem;
 }
 
 /* profile section style */
@@ -101,10 +102,22 @@ main{
 .each-section{
     margin-top: 2rem;
     border-radius: 15px;
-    padding-top: 3rem;
+    padding-top: 2rem;
     background-repeat: no-repeat;
-    background-position: top right;
-
+    background-position: 93% -0.8rem;
+}
+/* active on hover */
+.content-div:hover{
+    background: var(--desaturated-blue);
+}
+.header-flex svg:hover path{
+    fill: var(--white);
+}
+.flex-period p:hover{
+    color:var(--white);
+}
+.period-white:hover{
+    color: var(--desaturated-blue);
 }
 
 /* .svg-icon{
@@ -115,6 +128,7 @@ main{
     background: var(--dark-blue);
     border-radius: 15px;
     padding:1.8rem;
+    block-size: 100%;
 }
 .header-flex, .hours-flex{
     display: flex;
@@ -132,4 +146,70 @@ main{
     font-size: xx-large;
     color: var(--white);
     font-weight: 300;
+}
+
+/* media query for desktop design */
+@media only screen and (min-width: 1000px) {
+    body{
+        position: absolute;
+        inline-size: 100%;
+        block-size: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+  
+    main{
+        min-inline-size: 1000px; 
+        width: 90%;
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 2rem; 
+       
+        padding: 0;
+    }
+    .section-profile{
+        margin-top: 2rem;
+        width: 100%;
+        grid-row: 1/3;
+       
+    }
+    .blue-area-profile{
+        block-size: 60%;
+        flex-direction: column;
+        justify-content: center;
+        align-items:start;
+        gap: 2rem;
+        
+    }
+    .report{
+        font-size: medium;
+        margin-bottom:0.3rem;
+    }
+    .profile-name{
+        font-size:xx-large;
+        font-weight: 300;
+        color: var(--white);
+        line-height: 1.4;
+    }
+    .avatar{
+        margin-top: -2rem;
+    }
+    .flex-period{
+        flex-direction: column;
+        justify-content:space-evenly;
+        position: relative;
+        block-size: 40%;
+        
+    }
+    .hours-flex{
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+        margin-top:1rem;
+    }
+    .last-hours{
+        font-size: medium;
+    }
+    
 }
